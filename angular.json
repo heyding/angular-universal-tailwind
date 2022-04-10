@@ -20,7 +20,7 @@
             "customWebpackConfig": {
               "path": "webpack.config.js"
             },
-            "outputPath": "dist/angular-tailwind-template",
+            "outputPath": "dist/angular-tailwind-template/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -104,6 +104,64 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/angular-tailwind-template/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "angular-tailwind-template:build:development",
+              "serverTarget": "angular-tailwind-template:server:development"
+            },
+            "production": {
+              "browserTarget": "angular-tailwind-template:build:production",
+              "serverTarget": "angular-tailwind-template:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "angular-tailwind-template:build:production",
+              "serverTarget": "angular-tailwind-template:server:production"
+            },
+            "development": {
+              "browserTarget": "angular-tailwind-template:build:development",
+              "serverTarget": "angular-tailwind-template:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
