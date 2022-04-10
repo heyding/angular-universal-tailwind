@@ -25,6 +25,11 @@ This project uses ngx-translate to enable the translation into different languag
 
 This project uses NgRx functionality to keep a good overview of the state. It was set up by following this [guide](https://ngrx.io/guide/store/install) and can be used accordingly.
 
+## Angular Universal
+
+This project enables Server-side rendering with Angular Universal functionality. It was set up by following this [guide](https://angular.io/guide/universal) and can be used accordingly. If you face problems with the npm packages, see this [post](https://stackoverflow.com/questions/70498998/angular-13-errors-when-trying-to-instal-nguniversal-express-engine).
+
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
