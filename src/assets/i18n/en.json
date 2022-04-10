@@ -21,7 +21,7 @@
     }
   },
   "home": {
-    "headline": "Angular + Tailwind Template",
+    "headline": "Angular + Universal +Tailwind Template",
     "text": "If the website looks like the screenshot in \"src/assets/img\", Tailwind is set up and you can start coding.",
     "ngrx": {
       "title": "NGRX Test",
@@ -57,6 +57,10 @@
       "ngrx": {
         "title": "NgRX",
         "description": "NgRx is preconfigured. You do not need to install anything and are able to create actions, reducers and effects for your features."
+      },
+      "universal": {
+        "title": "Angular Universal",
+        "description": "SPAs have some deficits in the field of SEO. That's why this project is extended with Angular Universal to enable server-side rendering."
       }
     }
   },

@@ -1,4 +1,4 @@
-# Angular + Tailwind Template
+# Angular + Universal + Tailwind Template
 
 You can fork this template if you need a basic setup for an Angular project and want to use Tailwind CSS for the UI.
 Tailwind was integrated according to this [guide](https://jacobneterer.medium.com/angular-and-tailwindcss-2388fb6e0bab).
